@@ -1,0 +1,22 @@
+body{
+    background-color: cyan;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+}
+input{
+margin: 10px;  
+width: 250px;  
+height: 50px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+}
