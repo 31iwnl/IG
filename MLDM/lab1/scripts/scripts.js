@@ -3,7 +3,7 @@ var error_message = " ";
 function isValid(strok){
     let arr = strok.split(" ");
     if(strok1.length === 0 || strok2.length === 0) {
-        error_message = "Одно из множеств пустое, пожалуйста введите множества";
+        error_message = "Одно из множеств пустое, введите множества";
         return false;
     }
     for(let i = 0; i<arr.length; i++){
@@ -45,8 +45,8 @@ function isValid(strok){
       }  return true;
 }
 function Calc(){
-    strok1 = document.getElementById('first-field').value;
-    strok2 = document.getElementById('second-field').value;
+    strok1 = document.getElementById('first').value;
+    strok2 = document.getElementById('second').value;
     if (isValid(strok1) && isValid(strok2)){
         const first_set = new Set(strok1.split(" "));
         const second_set = new Set(strok2.split (" "));
