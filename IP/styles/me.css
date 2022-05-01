@@ -136,6 +136,7 @@ main {
     font-family:'Kaushan Script', cursive;
     line-height: 1.2;
     margin-top: -100px;
+    width: 600px;
 }
 
 .smile{
@@ -147,6 +148,9 @@ main {
 
 
 }
+/* .img {
+    margin-left: 100px;
+} */
 .main{
     display: none;
     position: relative;
@@ -295,7 +299,7 @@ main {
         flex-wrap: wrap;
     }
     .bio {
-        width: 400px;
-        padding: 200px 0px 0px;
+        width: 300px;
+        margin-top: -200px;
     }
 }
