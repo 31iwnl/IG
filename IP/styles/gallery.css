@@ -124,12 +124,7 @@ main {
     align-items: center;
     padding: 265px 0px 0px 0px;
 }
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+
 .text {
     color:#B38CF3;
     font-size: 32px;
@@ -152,10 +147,71 @@ main {
     height: 25px;
     width: 25px;
 }
+.line-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 60%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    
+  }
+  .img-container {
+    display: flex;
+    transition: all ease 1s;
+    cursor: grab;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  
+  .buttons-cont-gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  .left-arrow {
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    transition: all ease 0.5s;
+    display: flex;
+  }
+  .right-arrow {
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/right.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    transition: all ease 0.5s;
+    display: flex;
+  }
+  
+  .right-arrow:hover,
+  .left-arrow:hover {
+    transform: scale(1.1);
+    transition: all ease 0.5s;
+  }
+  
+ 
+  .wrapper {
+    display: flex;
+    max-width: 70.7%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -200px;
+  }
+   
 @media (max-width: 960px) {
-    .url {
-        display: none;
-    }
     .social {
         display: none;
     }
@@ -183,5 +239,14 @@ main {
     display: flex;
     cursor: pointer;
     margin-right: 40px;
+   }
+    .line-container{
+        flex: 50.0%;
+    }
+
 }
+@media (max-width: 530px) {
+    .line-container{
+        flex:100%
+    }
 }
