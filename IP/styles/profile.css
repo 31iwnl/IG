@@ -34,7 +34,7 @@ a:hover{text-decoration: none;}
 h1,h2,h3{font-size:inherit;font-weight: 400;}
 
 html {
-    background-image: url(../images/835-1600x900.jpg);
+    background-image: url(../images/830-1600x900.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -139,15 +139,11 @@ body {
     cursor: pointer;
     font-size: 16px;
 }
-.menu1:nth-child(4) {
+.menu1:nth-child(7) {
     color:yellow;
     font-family: 'Kaushan Script', cursive;;
 }
 .menu1:hover {
-    color:yellow;
-    font-family: 'Kaushan Script', cursive;;
-}
-.url a:hover {
     color:yellow;
     font-family: 'Kaushan Script', cursive;;
 }
@@ -165,29 +161,36 @@ body {
     display: inline-block;
     margin-left: 10px;
 }
+h4{
+    text-transform: uppercase;
+   font-size: 30px;
+    font-family: Montserrat;
+    cursor: pointer;
+    color:white;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.profile_img{
+    border: 2px solid black;
+    border-radius:20px/20px;
+}
+
 
 main {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 265px 0px 0px 0px;
+    padding: 215px 0px 0px 0px;
+    flex-direction: column;
 }
-
-.text {
-    color:#B38CF3;
-    font-size: 32px;
-    text-align: justify;
-    line-height: 1.5;
-    width: 30%;
-    margin-bottom: 30px;
-}
-.open{
-    display: none;
-    position: relative;
-    height: 85px;
-    width: 85px;
-
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .main{
@@ -196,70 +199,74 @@ main {
     height: 25px;
     width: 25px;
 }
-.line-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 50%;
-    overflow: hidden;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    
-  }
-  .img-container {
-    display: flex;
-    transition: all ease 1s;
-    cursor: grab;
-  }
-  
-  .hide {
-    display: none;
-  }
-  
-  
-  .buttons-cont-gallery {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 20px;
-    margin-top: 20px;
-  }
-  .left-arrow {
-    width: 50px;
-    height: 50px;
-    background-image: url(../images/left.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: transparent;
-    transition: all ease 0.5s;
-    display: flex;
-  }
-  .right-arrow {
-    width: 50px;
-    height: 50px;
-    background-image: url(../images/right.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: transparent;
-    transition: all ease 0.5s;
-    display: flex;
-  }
-  
-  .right-arrow:hover,
-  .left-arrow:hover {
-    transform: scale(1.1);
-    transition: all ease 0.5s;
-  }
-  .wrapper {
-    display: flex;
-    max-width: 71.7%;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -200px;
-  }
- 
 
-  
+.open{
+    display: none;
+    position: relative;
+    height: 85px;
+    width: 85px;
+
+}
+form{
+    margin-top: -200px;
+    height: 500px;
+    justify-content: center;
+}
+
+
+.group{
+    margin: 10px;
+    padding: 5px;
+}
+label{
+
+    text-transform: uppercase;
+    color: white;
+}
+input{
+    margin-top: 10px;
+    height: 40px;
+    width: 400px;
+    border-radius: 20px/20px;
+    border:none;
+    box-shadow: 2px 2px 5px grey;
+}
+input:focus{
+    border:2px solid yellow;
+
+}
+.button{
+    cursor:pointer;
+    padding: 15px 20px;
+    height: 50px;
+    margin-left: 155px;
+    margin-top:40px;
+    border:none;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-family: Montserrat;
+}
+.login{
+    color:red;
+    position:relative;
+    padding:15px 135px;
+    top:40px;
+    left:20px;
+}
+button:hover{
+    transform: scale(1.1);
+}
+.sql {
+    color:white;
+    height:35px;
+    width:250px;
+    border: solid white 1px;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
 @media (max-width: 960px) {
     .social {
         display: none;
@@ -273,29 +280,61 @@ main {
         font-size: 20px;
         width: 100%;
     }
+    .text {
+        margin-top: -100px;
+        height: 30%;
+        width: 50%;
+    }
+    h4{
+        height: 20%;
+        font-size:25px;
+
+    }
+    
 
 }
 @media (max-width: 730px) {
-   .link-container{
-       display: none;
+    .link-container {
+        display: none;
+    }
+   .menu1 {
+       display: flex;
+       cursor: pointer;
+       margin-right: 10px;
    }
-   .menu1{
+   .text {
+       margin-top: -100px;
+       height: 50%;
+       width: 90%;
+   }
+
+   .hamburger{
        display: flex;
        cursor: pointer;
        margin-right: 40px;
    }
-   .hamburger{
-    display: flex;
-    cursor: pointer;
-    margin-right: 40px;
+   form{
+    width: 100%;
    }
-    .line-container{
-        flex: 50.0%;
+    .sql{
+
+width: 225px;
+display: inline-block;
+height: 35px;
+    }
+    h3{
+        height: 50px;
+        width: 250px;
+    }
+}
+
+
+ @media (max-width: 490px) {
+ 
+    
+    h3{
+        height: 50px;
+        width: 250px;
     }
 
-}
-@media (max-width: 530px) {
-    .line-container{
-        flex:100%
-    }
 }

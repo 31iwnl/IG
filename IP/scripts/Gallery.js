@@ -6,7 +6,7 @@ window.onload = function() {
     let width; 
 
     function init() {
-        width = lineCont.offsetWidth + 50;
+        width = lineCont.offsetWidth;
         imgCont.style.width = width  * img.length + "px";
         img.forEach(item => {
             item.style.width =  width  + "px";

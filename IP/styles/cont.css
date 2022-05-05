@@ -1,6 +1,6 @@
 
 *{
-	padding: 2px;
+	padding: 0px;
 	margin: 0;
     border: 0;
 }
@@ -12,7 +12,7 @@
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 
-nav,footer,header,aside{display: block;}
+
 
 html,body{
     font-family: 'Kaushan Script', cursive;;
@@ -25,20 +25,16 @@ html,body{
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
-input,button,textarea{font-family:inherit;}
 
-input::-ms-clear{display: none;}
 button{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
 a, a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
 
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+h1,h2,h3{font-size:inherit;font-weight: 400;}
 
 html {
-    background-image: url(../images/CSS-Animated-Backgrounds-2.gif);
+    background-image: url(../images/830-1600x900.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -74,12 +70,65 @@ body {
     width: 800px;
     font-family: Montserrat;
 }
+.menuItem {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menuItem:hover {
+    text-decoration: underline;
+  }
+  
+  .hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: -1rem;
+    padding: 0px;
+    border: black solid 1px;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .closeIcon {
+    display: none;
+  }
+  
+  .menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: black;
+    color: white;
+    list-style: none;
+    padding-top: 2rem;
+  }
+  
+  .showMenu {
+    transform: translateY(0);
+  }
+  .hamburger{
+    display: none;
+    height: 65px;
+    width: 65px;
+
+}
+  
+
 .pages{
     display: flex;
 }
 .menu1 {
     font-family: 'Kaushan Script', cursive;;
-    width: 94px;
+    width: 84px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +177,7 @@ main {
     align-items: center;
     flex-direction: column;
     margin-top:-200px;
-    margin-left:80px;
+    margin-left: 22px;
 
 }
 
@@ -147,7 +196,6 @@ main {
     width: 60%;
     font-family: Montserrat;
     font-size: 28px;
-    padding: 0px 14px 12px 15px;
 
 }
 .button{
@@ -158,7 +206,7 @@ main {
     font-family: Montserrat;
     font-size:22px;
     border:solid white;
-    margin: 24px 65px 0px 0px;
+    margin: 24px 0px 0px 0px;
     border-radius: 15px;
 
     
@@ -196,7 +244,7 @@ main {
        cursor: pointer;
        margin-right: 40px;
    }
-   .open{
+   .hamburger{
     display: flex;
     cursor: pointer;
     margin-right: 40px;

@@ -2,16 +2,14 @@ var error_message = " ";
 
 function isValid(strok){
     let arr = strok.split(" ");
-    if(strok1.length === 0 || strok2.length === 0) {
-        error_message = "Одно из множеств пустое, введите множества";
-        return false;
-    }
+   
     for(let i = 0; i<arr.length; i++){
+        if (arr[i].length != 0){   
         if (arr[i].length != 4)
         {
             error_message = "Элемент массива должен содержать 4 символа"
-            return false;
-        }
+            return false;   
+        }  
         if ((arr[i][0] < 'A' ||  arr[i][0]>'z'))
         {
             error_message = "Первый элемент должен быть буквой"
@@ -42,8 +40,12 @@ function isValid(strok){
             error_message = "Четверый элемент должен быть четным"
             return false;
         }
-      }  return true;
-}
+      }  else{
+          return true;
+      }
+    } return true;
+    }
+
 function Calc(){
     strok1 = document.getElementById('first').value;
     strok2 = document.getElementById('second').value;

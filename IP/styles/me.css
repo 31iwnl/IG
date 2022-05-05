@@ -1,6 +1,6 @@
 
 *{
-	padding: 2px;
+	padding: 0px;
 	margin: 0;
     border: 0;
 }
@@ -12,7 +12,7 @@
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 
-nav,footer,header,aside{display: block;}
+
 
 html,body{
     font-family: 'Kaushan Script', cursive;;
@@ -25,20 +25,16 @@ html,body{
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
-input,button,textarea{font-family:inherit;}
 
-input::-ms-clear{display: none;}
 button{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
 a, a:visited{text-decoration: none;}
 a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
 
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+h1,h2,h3{font-size:inherit;font-weight: 400;}
 
 html {
-    background-image: url(../images/CSS-Animated-Backgrounds-2.gif);
+    background-image: url(../images/832-1600x900.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -74,12 +70,65 @@ body {
     width: 800px;
     font-family: Montserrat;
 }
+.menuItem {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menuItem:hover {
+    text-decoration: underline;
+  }
+  
+  .hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: -1rem;
+    padding: 0px;
+    border: black solid 1px;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .closeIcon {
+    display: none;
+  }
+  
+  .menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: black;
+    color: white;
+    list-style: none;
+    padding-top: 2rem;
+  }
+  
+  .showMenu {
+    transform: translateY(0);
+  }
+  .hamburger{
+    display: none;
+    height: 65px;
+    width: 65px;
+
+}
+  
+
 .pages{
     display: flex;
 }
 .menu1 {
     font-family: 'Kaushan Script', cursive;;
-    width: 94px;
+    width: 84px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,7 +189,7 @@ main {
 }
 
 .smile{
-    width: 304px;
+    width: 204px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -177,14 +226,10 @@ main {
         margin-right: 20px;
     }
     .bio {
-        margin-top: -230px;
+        justify-content: center;
         order: 1;
     }
-    .smile {
-        width: 200px;
-        position: relative;
-        top:200px;
-    }
+
     main {
         display: flex;
         flex-direction: row;
@@ -204,20 +249,8 @@ main {
     .logo {
         font-size: 23px;
     }
-    .bio {
-        width: 100%;
-        position: relative;
-        top:200px;
-        width: 250px;
-    }
-    .smile{
-        width: 200px;
-        position: relative;
-        right:90px;
-        top:150px;
 
 
-    }
     .open{
         display: none;
         position: relative;
@@ -238,11 +271,7 @@ main {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .smile {
-        width: 200px;
-        position: relative;
-        right:90px;
-    }
+
     .link-container{
         display: none;
     }
@@ -257,7 +286,7 @@ main {
         flex-wrap: wrap;
         width: 100%;
     }
-    .open{
+    .hamburger{
         display: flex;
         cursor: pointer;
         margin-right: 40px;
@@ -272,25 +301,11 @@ main {
        cursor: pointer;
        margin-right: 40px;
    }
-   .bio {
-        padding: 0px 0px 0px;
-        position: absolute;
-        top:400px;
-    }
-    .smile {
-        width: 200px;
-        margin-left: 15px;
-        position: relative;
-        top:700px;
-        right :50px;
-    }
+
+
 }
 @media (max-width: 470px) {
-    .bio {
-        margin-bottom: 520px;
-        position: absolute;
-        top:400px;
-    }
+
 }
 @media (max-width: 330px) {
     main {
@@ -298,8 +313,5 @@ main {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .bio {
-        width: 300px;
-        margin-top: -200px;
-    }
+
 }

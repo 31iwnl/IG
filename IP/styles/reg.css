@@ -34,7 +34,7 @@ a:hover{text-decoration: none;}
 h1,h2,h3{font-size:inherit;font-weight: 400;}
 
 html {
-    background-image: url(../images/835-1600x900.jpg);
+    background-image: url(../images/836-1600x900.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -139,15 +139,11 @@ body {
     cursor: pointer;
     font-size: 16px;
 }
-.menu1:nth-child(4) {
+.menu1:nth-child(7) {
     color:yellow;
     font-family: 'Kaushan Script', cursive;;
 }
 .menu1:hover {
-    color:yellow;
-    font-family: 'Kaushan Script', cursive;;
-}
-.url a:hover {
     color:yellow;
     font-family: 'Kaushan Script', cursive;;
 }
@@ -165,29 +161,18 @@ body {
     display: inline-block;
     margin-left: 10px;
 }
-
 main {
     width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 315px 0px 0px 0px;
+}
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 265px 0px 0px 0px;
-}
-
-.text {
-    color:#B38CF3;
-    font-size: 32px;
-    text-align: justify;
-    line-height: 1.5;
-    width: 30%;
-    margin-bottom: 30px;
-}
-.open{
-    display: none;
-    position: relative;
-    height: 85px;
-    width: 85px;
-
+    flex-direction: column;
 }
 
 .main{
@@ -196,70 +181,59 @@ main {
     height: 25px;
     width: 25px;
 }
-.line-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 50%;
-    overflow: hidden;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    
-  }
-  .img-container {
-    display: flex;
-    transition: all ease 1s;
-    cursor: grab;
-  }
-  
-  .hide {
-    display: none;
-  }
-  
-  
-  .buttons-cont-gallery {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 20px;
-    margin-top: 20px;
-  }
-  .left-arrow {
-    width: 50px;
-    height: 50px;
-    background-image: url(../images/left.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: transparent;
-    transition: all ease 0.5s;
-    display: flex;
-  }
-  .right-arrow {
-    width: 50px;
-    height: 50px;
-    background-image: url(../images/right.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: transparent;
-    transition: all ease 0.5s;
-    display: flex;
-  }
-  
-  .right-arrow:hover,
-  .left-arrow:hover {
-    transform: scale(1.1);
-    transition: all ease 0.5s;
-  }
-  .wrapper {
-    display: flex;
-    max-width: 71.7%;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -200px;
-  }
- 
 
-  
+.open{
+    display: none;
+    position: relative;
+    height: 85px;
+    width: 85px;
+
+}
+a{
+    color:red;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    color:#ffffff;
+    margin-top: -280px;
+}
+form h1 {
+    color:white;
+    font-size: 40px;
+    padding-bottom: 40px;
+}
+form button {
+    margin-top: 30px;
+    height: 25px;
+    background-image:-moz-linear-gradient( lightblue 60%, white 90%);
+}
+label {
+    font-size: 15px;
+    text-align: center;
+}
+input {
+    font-size: 13px;
+    margin: 10px 0;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    color: white;
+}
+form p {
+    padding-top: 10px;
+    text-align: center;
+}
+input:focus{
+    border:2px solid yellow;
+
+}
+
+
+button:hover{
+    transform: scale(1.1);
+}
 @media (max-width: 960px) {
     .social {
         display: none;
@@ -274,28 +248,35 @@ main {
         width: 100%;
     }
 
+
 }
 @media (max-width: 730px) {
-   .link-container{
-       display: none;
+    .link-container {
+        display: none;
+    }
+   .menu1 {
+       display: flex;
+       cursor: pointer;
+       margin-right: 10px;
    }
-   .menu1{
+
+
+   .open{
        display: flex;
        cursor: pointer;
        margin-right: 40px;
    }
-   .hamburger{
-    display: flex;
-    cursor: pointer;
-    margin-right: 40px;
-   }
-    .line-container{
-        flex: 50.0%;
-    }
+    
 
 }
-@media (max-width: 530px) {
-    .line-container{
-        flex:100%
+ @media (max-width: 490px) {
+    .text {
+       height: 30%;
+       width: 90%;
     }
+    .hamburger{
+        display: flex;
+        margin-right: 40px;
+    }
+
 }
