@@ -5,7 +5,7 @@ function isValid(strok){
    
     for(let i = 0; i<arr.length; i++){
         if (arr[i].length != 0){   
-        if (arr[i].length != 4)
+        if (arr[i].length < 4)
         {
             error_message = "Элемент массива должен содержать 4 символа"
             return false;   
