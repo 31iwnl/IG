@@ -14,7 +14,7 @@ a:focus,a:active{outline: none;}
 
 
 
-html,body{
+html,body .stage, .ring, .img{
     font-family: 'Kaushan Script', cursive;;
 	height: 100%;
 	width: 100%;
@@ -24,6 +24,8 @@ html,body{
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+    transform-style: preserve-3d;
+  user-select:none;
 }
 
 button{cursor: pointer;}
@@ -46,6 +48,24 @@ html {
 body {
     font-family: Montserrat;
 }
+
+.container {
+    /*на сколько центр карусели будет виртуально уедет вглубь монитора*/
+    perspective: 2000px;
+    width: 300px;
+    height: 400px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    position: absolute;
+    
+  }
+  .img{
+    position: absolute;
+  }
+  .ring{
+    position: absolute;
+  }
 .links {
     max-width: 1800px;
     margin: 0 auto;

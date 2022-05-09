@@ -46,28 +46,23 @@ session_start();
         </header>
     </div>
     <main>
-        <div class="wrapper">
-            <div class="line-container">
-                <div class="img-container drag-box">
-                    <img src="../images/1.jpg" alt="" class="js-imgg">
-                    <img src="../images/2.jpg" alt="" class="js-img">
-                    <img src="../images/3.jpg" alt="" class="js-img">
-                    <img src="../images/4.jpg" alt="" class="js-img">
-                    <img src="../images/5.jpg" alt="" class="js-img">
-                    <img src="../images/6.jpg" alt="" class="js-img">
-                    <img src="../images/7.jpg" alt="" class="js-img">
-                    <img src="../images/8.jpg" alt="" class="js-img">
-                </div>
-                <div class="buttons-cont-gallery">
-                    <button class="left-arrow"></button>
-                    <button class="right-arrow"></button>
-                </div>
-            </div>
-            <div class="img-frame drag-box"></div>
-        </div>
+    <div class="container">
+        <div class="ring">
+      <!-- блоки для изображений в карусели -->
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+         <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+    </div>
+  </div>
     </main>
 </div>
-        <script src="../scripts/Gallery.js"></script>
         <ul class="menu">
         <li><a class="menuItem" href="../index.php">Главная</a></li>
     <li><a class="menuItem" href="./me.php">Обо мне</a></li>
@@ -86,6 +81,9 @@ session_start();
   <div class="burger-menu_overlay"></div>
 </div>
         <script src="../scripts/burger.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script>
+        <script src="../scripts/gall.js"></script>
     </main>
 </body>
 </html>
