@@ -53,7 +53,7 @@
         <label>Почта</label>
         <input type="email" name="email" value="<?= $product['email']?>">
         <label>Пароль</label>
-        <input type="password" name="password" value="<?= $product['password']?>">
+        <input type="password" name="password" value="">
         <button type="submit">Изменить</button>
         </form>
     </main>

@@ -27,7 +27,8 @@
                     $main = "Профиль";
                     $tp = "../pages2/profile.php";
 
-                } 
+                }
+                
             ?>
                     <a class="menu1" href="../index.php">Главная</a>
                     <a class="menu1" href="../pages/me.php">Обо мне</a>
@@ -53,7 +54,8 @@
                     <td>Логин</td>
                     <td>Почта</td>
                     <td>Аватар</td>
-                    <td>Тип пользователя</td>                    
+                    <td>Тип пользователя</td>
+                    <td>Очки</td>                     
                     <td>Редактировать</td>
                     <td>Удалить</td>
                 </tr>
@@ -63,13 +65,21 @@
             while( ($user = mysqli_fetch_array($res))) {
                 ?>
                 <tr>
+                    <?php 
+                    $delete = "../src/delete.php?id=";
+                    if($user['type'] === 'admin'){
+                        $delete = ("#");
+                    }
+                        ?>
+                    
                     <td class="data"><?=$user['id']?></td>
                     <td class="data"><?=$user['login']?></td>
                     <td class="data"><?=$user['email']?></td>
                     <td class="data"><img src="<?="../" . $user['image']?>" width="100" height = "90" class="avatarimg" alt="Аватарка"></td>
                     <td class ="data"><?=$user['type']?></td>
+                    <td class ="data"><?=$user['score']?></td>
                     <td class="data"><a href="./redact.php?id=<?=$user['id']?>"><img src="../images/edit.png" width="50" class="edel" alt="Редактировать"></a></td>
-                    <td class="data"><a href="../src/delete.php?id=<?=$user['id']?>"><img src="../images/delete.png" width="50" class="edel" alt="Удалить"></a></td>
+                    <td class="data"><a href="<?= $delete ?><?=$user['id']?>"><img src="../images/delete.png" width="50" class="edel" alt="Удалить"></a></td>
                 </tr>
         </div>
         <?php

@@ -1,7 +1,12 @@
-<?php
+<?php 
 session_start();
-require_once '../src/openserver.php';
-	$password = md5($_POST['password']);
+   require_once '../src/openserver.php';
+    if (!$_SESSION['user']) {
+        header('Location: ../pages/log.php');
+    
+    }
+    $_SESSION['score'] = $user['score'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,27 +18,21 @@ require_once '../src/openserver.php';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../styles/profile.css">
-    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="../styles/game.css">
+    <title>Game</title>
 </head>
 <body>
-    <?php
-
-        $idid = $_SESSION['user']['id'];
-        $list = mysqli_query($connect, "SELECT * FROM users WHERE id = '$idid' ");
-        $list = mysqli_fetch_all($list);
-        foreach($list as $li){
-        }
-    ?>
     <div class="links">
         <header id="header">
             <a class="logo" href="#">Melon</a>
+           
+            <div class="main"><img src="./images/830-1600x900.jpg"></div>
             <div class="link-container">
-                
                 <div class="pages">
-                    <?php
-                $main = "Главная";
-                $tp = "../index.php";
+                    
+            <?php 
+                $main = "Вход";
+                $tp = "../main.php";
                 if($_SESSION['user']){
                     $main = "Профиль";
                     $tp = "../pages2/profile.php";
@@ -55,33 +54,22 @@ require_once '../src/openserver.php';
         </header>
     </div>
     <main>
-        <form>
-        <h4 color = "white">Мой профиль</h4>   
-        <img class = "profile_img" src = "../<?=$li[4] ?>" alt = "" width = "200px" height = "200px">
-        <h3>
-        id = <?= $li[0]?>
-    </h3>
-    <h3>
-       Логин = <?= $li[1]?>
-    </h3>
-    <h3>
-    Почта = <?= $li[3]?>
-    </h3>
-    <?php
-    $db = "../pages2/db_user.php";
-    if($li[5] === 'admin'){
-        $db = "../pages2/db.php";
-    } 
-     ?>
-     <?php
-            $query = "SELECT * FROM `users`";
-            $res = mysqli_query($connect, $query);
-            $user = mysqli_fetch_array($res)
-            ?>
-    <a class="sql" href="./redact.php?id=<?=$li[0]?>">Редактировать профиль</>
-    <a class="sql" href="<?= $db ?>">Таблица всех пользователей</a>
-    <a class="sql" href= "../src/exit.php">Выйти</a>
-        </form>
+    <div class = "center">
+    <div id="game">
+    <div class = "alert" id = "death">Вы проиграли</div>  
+    <div class = "alert2" id = "new">Новый рекорд!</div> 
+		<div class="game-header">
+			<div class="game-score">
+				<span class="score-count">1234</span>
+                <p id="score"></p>
+			</div>
+		</div>
+		<div class="canvas-wrapper">
+			<canvas id="game-canvas" width="320" height="400"></canvas>
+		</div>
+	</div>
+    </div>
+	<script src="../scripts/game.js"></script>
         <ul class="menu">
         <li><a class="menuItem" href="../index.php">Главная</a></li>
     <li><a class="menuItem" href="../pages/me.php">Обо мне</a></li>
@@ -91,6 +79,7 @@ require_once '../src/openserver.php';
     <li><a class="menuItem" href="../pages/cont.php">Контакты</a></li>
     <li><a class="menuItem" href="<?= $tp ?>"><?= $main ?></a></li>
   </ul>
+  
   <button class="hamburger"><img src = "../images/openn.png">
     <!-- material icons https://material.io/resources/icons/ -->
     <i class="menuIcon material-icons"></i>
@@ -99,8 +88,28 @@ require_once '../src/openserver.php';
   </nav>
   <div class="burger-menu_overlay"></div>
 </div>
-        <script src="../scripts/burger.js"></script>
-    </main>
+<form action="../src/res.php" method="post">
+            <?php
 
+        $idid = $_SESSION['user']['id'];
+        $list = mysqli_query($connect, "SELECT * FROM users WHERE id = '$idid' ");
+        $list = mysqli_fetch_all($list);
+        foreach($list as $li){
+        }
+    ?>
+                    <h10>
+        Ваш рекорд = <?= $li[6]?>
+                    </h10>
+            <input type = "hidden" name = "id" value = "<?= $_SESSION['user']['id'] ?>"> 
+            <input type = "hidden" name = "score" id = "scores" value = "<?= $li[6]?>">
+            <button class = "butt" id="butt1" type="button" onclick="reload()">Начать заново</button>
+            <button class = "butt" id="butt" type="submit" style="visibility: hidden;">Обновить результаты</button>
+        </form>
+        <div>
+  <img class = "snake "src = "../images/snake.png">
+  </div>
+        <script src="../scripts/burger.js"></script> 
+        <audio src="../mp3/Snake.mp3" autoplay="autoplay"></audio>
+    </main>
 </body>
 </html>

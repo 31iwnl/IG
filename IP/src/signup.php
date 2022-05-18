@@ -3,10 +3,11 @@
 	
 	require_once 'openserver.php';
 	$login = $_POST['login'];
-	$password = $_POST['password'];
-	$password2 = $_POST['password2'];
+	$password = md5($_POST['password']);
+	$password2 = md5($_POST['password2']);
 	$email = $_POST['email'];
 	$image = $_POST['image'];
+	
 
         $idid = $_SESSION['user']['id'];
         $list = mysqli_query($connect, "SELECT * FROM users WHERE id = '$idid' ");
@@ -26,13 +27,12 @@
 		$query = "SELECT * FROM users WHERE login='$login'";
 		$result = mysqli_query($connect, $query) or die(mysqli_error($connect));
 		$count = mysqli_num_rows($result);
+
     	if ($count != 0) {
 			$_SESSION['message'] = 'Логин уже существет';
 			header('Location: ../pages/reg.php');
     	}else{
 		mysqli_query($connect,"INSERT INTO `users` (`id`, `login`, `password`, `email`, `image`) VALUES (NULL, '$login', '$password', '$email', '$path') ");
-		$_SESSION['message'] = 'Регистрация прошла успешно';
-		
 		header('Location: ../pages/log.php');
 		}
 	}

@@ -53,6 +53,7 @@
                     <td>Логин</td>
                     <td>Почта</td>
                     <td>Аватар</td>
+                    <td>Очки</td>
                 </tr>
             <?php
             $query = "SELECT * FROM `users`";
@@ -64,6 +65,7 @@
                     <td class="data"><?=$user['login']?></td>
                     <td class="data"><?=$user['email']?></td>
                     <td class="data"><img src="<?="../" . $user['image']?>" width="100" height = "90" class="avatarimg" alt="Аватарка"></td>
+                    <td class ="data"><?=$user['score']?></td>
                 </tr>
         </div>
         <?php

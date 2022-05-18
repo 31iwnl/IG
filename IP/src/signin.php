@@ -2,7 +2,7 @@
 	session_start();
 	require_once 'openserver.php';
 	$login = $_POST['login'];
-	$password = $_POST['password'];
+	$password = md5($_POST['password']);
 
 	$check_user = mysqli_query($connect,"SELECT * FROM `users` 
 	WHERE `login` = '$login' AND `password` = '$password'");
@@ -13,7 +13,8 @@
 			"login" => $user['login'],
 			"password"=> $user['password'],
 			"email"=> $user['email'],
-			"image"=> $user['image']
+			"image"=> $user['image'],
+			"score" => $user['score']
 		];		
 		header('Location: ../pages2/profile.php');
 
