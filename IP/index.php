@@ -24,7 +24,7 @@ session_start();
                 <div class="pages">
             <?php 
                 $main = "Вход";
-                $tp = "../pages/main.php";
+                $tp = "./pages/main.php";
                 if($_SESSION['user']){
                     $main = "Профиль";
                     $tp = "./pages2/profile.php";
