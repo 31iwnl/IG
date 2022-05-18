@@ -27,7 +27,7 @@ session_start();
                 $tp = "../pages/main.php";
                 if($_SESSION['user']){
                     $main = "Профиль";
-                    $tp = "../pages2/profile.php";
+                    $tp = "./pages2/profile.php";
 
                 } 
             ?>
@@ -50,7 +50,7 @@ session_start();
                <h5>Добро пожаловать!</h5>
                <div class = "hh">Здесь вы найдете: Информацию обо мне, Мои контакты, Выполненные работы, Галлерею, а также мои увлечения.
                </div>
-               <a class = "button" href = "../pages2/game.php">Игра</a>
+               <a class = "button" href = "./pages2/game.php">Игра</a>
         </div>
         <ul class="menu">
         <li><a class="menuItem" href="./index.php">Главная</a></li>
