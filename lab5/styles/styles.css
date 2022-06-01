@@ -1,0 +1,41 @@
+body{
+    background-color: cyan;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+}
+p{
+    font-size: 25px;
+}
+
+.matrix{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 300px;
+    text-align: center;
+}
+.form2{
+    width: 200px;
+    height: 30px;
+    margin: 15px;
+}
